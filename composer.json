@@ -31,7 +31,9 @@
         "drupal/core-dev": "^9",
         "drupal/devel": "^4.0",
         "drupal/drupal-extension": "^4.1",
-        "drupal/twig_xdebug": "^1.2"
+        "drupal/twig_xdebug": "^1.2",
+        "friendsoftwig/twigcs": "^3.2",
+        "mglaman/drupal-check": "^1.1"
     },
     "conflict": {
         "drupal/drupal": "*"

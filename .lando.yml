@@ -82,6 +82,14 @@ tooling:
     service: appserver
     description: Run Drupal Console commands
     cmd: /app/bin/drupal
+  check:
+    service: appserver
+    description: Run Drupal-Check commands
+    cmd: /app/bin/drupal-check
+  twigcs:
+    service: appserver
+    description: Run Twigcs commands
+    cmd: /app/bin/twigcs
   chromedriver:
     service: chromedriver
     description: Local testing with chromedriver
