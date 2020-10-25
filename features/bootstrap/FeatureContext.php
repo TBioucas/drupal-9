@@ -23,12 +23,14 @@ class FeatureContext extends RawDrupalContext {
   }
 
   /**
-   * @Then I scroll into view :selector aligned to :alignTo
+   * Scroll view into an alignment.
    *
    * @param string $selector
    *   The CSS selector of the element.
    * @param string $alignTo
    *   A string value that indicates the type of the align.
+   *
+   * @Then I scroll into view :selector aligned to :alignTo
    *
    * @javascript @api
    */
@@ -69,7 +71,7 @@ class FeatureContext extends RawDrupalContext {
   }
 
   /**
-   * @Then I should see the text :text on element :selector on parent :parent_selector
+   * Check text of element on parent.
    *
    * @param string $text
    *   The text inside the element.
@@ -77,6 +79,8 @@ class FeatureContext extends RawDrupalContext {
    *   The CSS selector of the element.
    * @param string $parent_selector
    *   The CSS selector of the element's parent.
+   *
+   * @Then I should see the text :text on element :selector on parent :parent_selector
    *
    * @throws \Exception
    */
@@ -99,14 +103,16 @@ class FeatureContext extends RawDrupalContext {
   }
 
   /**
-   * @Then I should see :number items :selector on parent :parent_selector
+   * Check n elements on parent.
    *
-   * * @param string $number
+   * @param string $number
    *   The minimun number of nodes to count.
    * @param string $selector
    *   The CSS selector of the element.
    * @param string $parent_selector
    *   The CSS selector of the element's parent.
+   *
+   * @Then I should see :number items :selector on parent :parent_selector
    *
    * @throws \Exception
    */
@@ -126,12 +132,14 @@ class FeatureContext extends RawDrupalContext {
   }
 
   /**
-   * @Then I should see the items :selector with the class :class
+   * Check items class.
    *
    * @param string $selector
    *   The CSS selector of the element.
    * @param string $class
    *   The CSS class which the element have.
+   *
+   * @Then I should see the items :selector with the class :class
    *
    * @throws \Exception
    */
@@ -150,12 +158,14 @@ class FeatureContext extends RawDrupalContext {
   }
 
   /**
-   * @Then I should see the element :selector with the class :class
+   * Check element with class.
    *
    * @param string $selector
    *   The CSS selector of the element.
    * @param string $class
    *   The CSS class which the element have.
+   *
+   * @Then I should see the element :selector with the class :class
    *
    * @throws \Exception
    */
@@ -172,12 +182,14 @@ class FeatureContext extends RawDrupalContext {
   }
 
   /**
-   * @Then I should see the element :selhasclassector without the class :class
+   * Check element without class.
    *
    * @param string $selector
    *   The CSS selector of the element.
    * @param string $class
    *   The CSS class which the element doesn't have.
+   *
+   * @Then I should see the element :selhasclassector without the class :class
    *
    * @throws \Exception
    */
@@ -194,10 +206,12 @@ class FeatureContext extends RawDrupalContext {
   }
 
   /**
-   * @When I click on :selector
+   * Click on element.
    *
    * @param string $selector
    *   The CSS selector of the element.
+   *
+   * @When I click on :selector
    *
    * @throws \Exception
    */
@@ -208,12 +222,14 @@ class FeatureContext extends RawDrupalContext {
   }
 
   /**
-   * @When I click on :selector inside parent :parent_selector
+   * Click element inside parent.
    *
    * @param string $selector
    *   The CSS selector of the element.
    * @param string $parent_selector
    *   The CSS selector of the element's parent.
+   *
+   * @When I click on :selector inside parent :parent_selector
    *
    * @throws \Exception
    */
@@ -225,19 +241,19 @@ class FeatureContext extends RawDrupalContext {
   }
 
   /**
-   * @Then I wait :duration
+   * Wait.
    *
    * @param string $duration
    *   The duration to wait for.
+   *
+   * @Then I wait :duration
    */
   public function iWait($duration) {
     $this->getSession()->wait((int ) $duration);
   }
 
   /**
-   * Close the cookies popup
-   * in order to be able to interact with other elements
-   * on the page.
+   * Close the cookies popup.
    *
    * @Given I close the cookie popup
    */
