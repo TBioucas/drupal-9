@@ -90,6 +90,10 @@ tooling:
     service: appserver
     description: Run Twigcs commands
     cmd: /app/bin/twigcs
+  grumphp:
+    service: appserver
+    description: Run Grumphp commands
+    cmd: /app/bin/grumphp
   chromedriver:
     service: chromedriver
     description: Local testing with chromedriver
